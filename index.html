@@ -2,47 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ziyi个人Github博客页面</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-    <style>
-        html{
-            height: 100%;
-        }
-        body {
-            background-image: url("/bg.png");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            opacity: 0.8;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>个人简历 - [您的名字]</title>
 </head>
 <body>
-    <div class="container">
-        <div class="jumbotron">
-            <div class="container">
-                <h1>ziyi个人网站 <small>Github Pages</small></h1>
-                <p>这里是ZhangZiyi的个人网站，更多信息请往下继续浏览，站点由Github Pages提供！</p>
-            </div>
-        </div>
-        <h3>导航栏</h3>
-        <ul class="list-group">
-            <li class="list-group-item"><a href="https://blog.csdn.net/wangzirui32/category_10745800.html">Python</a></li>
-            <li class="list-group-item"><a href="https://blog.csdn.net/wangzirui32/category_10923311.html">Python网络爬虫</a></li>
-            <li class="list-group-item"><a href="https://blog.csdn.net/wangzirui32/category_10769409.html">Python模块介绍使用</a></li>
-            <li class="list-group-item"><a href="https://blog.csdn.net/wangzirui32/category_10807102.html">HTML</a></li>
-            <li class="list-group-item"><a href="https://blog.csdn.net/wangzirui32/category_11747585.html">Boostarp</a></li>
-            <li class="list-group-item"><a href="https://blog.csdn.net/wangzirui32/category_10812072.html">JavaScript</a></li>
-            <li class="list-group-item"><a href="https://blog.csdn.net/wangzirui32/category_10926142.html">jQuery</a></li>
-        </ul>
-        <h3>其他资源</h3>
-        <div class="links">
-            <a href="https://github.com/wangzirui32" class="btn btn-primary">Github</a>
-            <a href="https://blog.csdn.net/wangzirui32" class="btn btn-danger">CSDN</a>
-            <a href="https://gitee.com/wangzirui32" class="btn btn-warning">Gitee</a>
-        </div>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#experience">工作经历</a></li>
+                <li><a href="#education">教育背景</a></li>
+                <li><a href="#skills">技能</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>[您的全名]</h1>
+            <p>职位: [您的职业目标或专业领域]</p>
+            <p>简短介绍自己。</p>
+        </section>
+
+        <section id="experience">
+            <h2>工作经历</h2>
+            <!-- 工作经历列表 -->
+        </section>
+
+        <section id="education">
+            <h2>教育背景</h2>
+            <!-- 教育背景列表 -->
+        </section>
+
+        <section id="skills">
+            <h2>技能</h2>
+            <ul id="skillList">
+                <li>技能1 <button onclick="showSkill('skill1')">详情</button></li>
+                <li>技能2 <button onclick="showSkill('skill2')">详情</button></li>
+                <!-- 更多技能 -->
+            </ul>
+            <div id="skillDetails"></div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
 </body>
 </html>
