@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obscurity</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header .logo img {
+            height: 40px;
+            vertical-align: middle;
+        }
+        .header h1 {
+            display: inline;
+            margin-left: 10px;
+            font-size: 24px;
+            vertical-align: middle;
+            font-weight: 700;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            color: #e74c3c;
+            margin: 20px 0;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .grid-item {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .grid-item img {
+            max-width: 60px;
+            margin-bottom: 10px;
+        }
+        .grid-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .grid-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+        }
+        .grid-item::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(45deg, #e74c3c, #f39c12);
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        .grid-item:hover::after {
+            width: 80%;
+        }
+        .grid-item::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .grid-item:hover::before {
+            opacity: 1;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 20px;
+            }
+            .container {
+                padding: 10px;
+            }
+            .section-title {
+                font-size: 20px;
+            }
+            .grid-item {
+                padding: 15px;
+            }
+            .grid-item p {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 18px;
+            }
+            .container {
+                padding: 5px;
+            }
+            .section-title {
+                font-size: 18px;
+            }
+            .grid-item {
+                padding: 10px;
+            }
+            .grid-item p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1>obscurity</h1>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="section-title">影视娱乐</h2>
+        <div class="grid">
+            <a href="https://example.com/shenmayingyuan" class="grid-item">
+                <img src="icon1.png" alt="神马影院">
+                <p>神马影院</p>
+            </a>
+            <a href="https://example.com/zhuoying" class="grid-item">
+                <img src="icon2.png" alt="追影视频">
+                <p>追影视频</p>
+            </a>
+            <a href="https://example.com/biquge" class="grid-item">
+                <img src="icon3.png" alt="笔趣阁">
+                <p>笔趣阁</p>
+            </a>
+            <!-- Add more grid items here -->
+        </div>
+        <h2 class="section-title">资源网站</h2>
+        <div class="grid">
+            <a href="https://www.iiice.cn/#/" class="grid-item">
+                <img src="https://mp-b8c095af-cf91-419a-83ce-b38b97f0e027.cdn.bspapp.com/cloudstorage/61246534-2c29-4197-8a06-483f2ef3385a.png" alt="下次一定">
+                <p>下次一定</p >
+            </a >
+            <a href="https://www.crxsoso.com/" class="grid-item">
+                <img src="https://www.crxsoso.com/favicon.ico" alt="Crx搜搜">
+                <p>Crx搜搜</p >
+            </a >
+            <a href="https://www.x6d.com/" class="grid-item">
+                <img src="https://www.x6d.com/static/images/logo.png" alt="小刀娱乐网">
+                <p>小刀娱乐网</p >
+            </a >
+            <a href="https://www.yxzhi.com/" class="grid-item">
+                <img src="https://www.yxzhi.com/wp-content/uploads/2023/06/favicon.png" alt="鸭先知">
+                <p>鸭先知</p >
+            </a >
+            <a href="https://www.ghxi.com/" class="grid-item">
+                <img src="https://www.ghxi.com/favicon.ico" alt="果核剥壳">
+                <p>果核剥壳</p >
+            </a >
+            <a href="https://fffxx.com/" class="grid-item">
+                <img src="https://fffxx.com/favicon.ico" alt="分享网">
+                <p>分享网</p >
+            </a >
+            <a href="https://www.sixyin.com/" class="grid-item">
+                <img src="https://www.sixyin.com/wp-content/uploads/2020/07/1595643570-favicon.png" alt="六音">
+                <p>六音</p >
+            </a >
+            <a href="https://uxy.ooxox.cn/?" class="grid-item">
+                <img src="https://uxy.ooxox.cn/favicon.ico" alt="And Color Pro">
+                <p>And Color Pro</p >
+            </a >
+            <!-- Add more grid items here -->
+        </div>
+        <h2 class="section-title">好用工具</h2>
+        <div class="grid">
+            <a href="https://example.com/z-library" class="grid-item">
+                <img src="icon6.png" alt="Z-Library">
+                <p>Z-Library</p>
+            </a>
+            <a href="https://example.com/zhaoshushenqi" class="grid-item">
+                <img src="icon7.png" alt="找书神器">
+                <p>找书神器</p>
+            </a>
+            <!-- Add more grid items here -->
+        </div>
+        <h2 class="section-title">装机必备</h2>
+        <div class="grid">
+            <a href="https://example.com/simayi" class="grid-item">
+                <img src="icon8.png" alt="司马懿AI读文档">
+                <p>司马懿AI读文档</p>
+            </a>
+            <a href="https://example.com/aishengchengppt" class="grid-item">
+                <img src="icon9.png" alt="AI生成PPT">
+                <p>AI生成PPT</p>
+            </a>
+            <!-- Add more grid items here -->
+        </div>
+    </div>
+</body>
+</html>
